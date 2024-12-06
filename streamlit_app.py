@@ -185,8 +185,6 @@ def main():
     if 'result' not in st.session_state:
         st.session_state.result = None
     
-    
-    
     # Botón de ejecución
     if st.button("Ejecutar"):
         if metodo == "Búsqueda":
