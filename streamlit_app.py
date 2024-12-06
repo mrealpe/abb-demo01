@@ -1,5 +1,6 @@
 import streamlit as st
 import graphviz
+st.set_page_config(page_title="ABB Demo 01", page_icon="📊", layout="wide")
 
 class Node:
     def __init__(self, element):
