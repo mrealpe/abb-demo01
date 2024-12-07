@@ -38,16 +38,7 @@ class BinarySearchTree:
                 if current_node is None:
                     steps.append({"type": "node", "node": None, "message": "Nodo actual es null. Búsqueda termina: False"})
                     return False
-                
-                a='''
-                path.append(current_node)
-                steps.append({
-                    "type": "node", 
-                    "node": current_node, 
-                    "path": path.copy(),
-                    "message": f"Nodo actual: {current_node.element}"
-                })
-                '''
+
                 if target == current_node.element:
                     steps.append({
                         "type": "result", 
@@ -114,6 +105,12 @@ class BinarySearchTree:
                 })
                 
                 altura_izq = recursive_altura(current_node.left)
+                steps.append({
+                    "type": "retorna", 
+                    "node": current_node, 
+                    "message": f"{current_node.element}, retorna {altura_izq}"
+                })
+
                 
                 altura_der = recursive_altura(current_node.right)
                 
