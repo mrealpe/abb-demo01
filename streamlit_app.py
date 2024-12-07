@@ -39,7 +39,7 @@ class BinarySearchTree:
                     steps.append({"type": "node", "node": None, "message": "Nodo actual es null. Búsqueda termina: False"})
                     return False
                 
-                '''
+                a='''
                 path.append(current_node)
                 steps.append({
                     "type": "node", 
