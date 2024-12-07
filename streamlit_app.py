@@ -224,13 +224,13 @@ def main():
     # Botones de navegación
     col1, col2, col3, col4 = st.columns(4)
     with col1:
-        if st.button("<=="):
+        if st.button("<<=="):
             st.session_state.current_step = 0
     with col2:
-        if st.button("<=") and st.session_state.current_step > 0:
+        if st.button("<-") and st.session_state.current_step > 0:
             st.session_state.current_step -= 1
     with col3:
-        if st.button("=>") and st.session_state.current_step < len(st.session_state.steps) - 1:
+        if st.button("->") and st.session_state.current_step < len(st.session_state.steps) - 1:
             st.session_state.current_step += 1
     with col4:
         if st.button("==>>"):
