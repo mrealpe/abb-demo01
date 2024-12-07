@@ -108,12 +108,18 @@ class BinarySearchTree:
                 steps.append({
                     "type": "retorna", 
                     "node": current_node, 
-                    "message": f"{current_node.left.element}, retorna {altura_izq}"
+                    "message": f"{current_node.element}.izq retorna {altura_izq}"
                 })
 
                 
                 altura_der = recursive_altura(current_node.right)
-                
+                steps.append({
+                    "type": "retorna", 
+                    "node": current_node, 
+                    "message": f"{current_node.element}.der retorna {altura_der}"
+                })
+
+
                 max_altura = 1 + max(altura_izq, altura_der)
                 steps.append({
                     "type": "result", 
