@@ -69,7 +69,7 @@ class BinarySearchTree:
                     "type": "retorna", 
                     "node": current_node, 
                     "path": path.copy(),
-                    "message": f"{target} < {current_node.element}, retorna {retorno}"
+                    "message": f"{current_node.element}, retorna {retorno}"
                     })
                     return retorno
                 
@@ -79,7 +79,15 @@ class BinarySearchTree:
                     "path": path.copy(),
                     "message": f"{target} < {current_node.element}, moviéndose al hijo izquierdo"
                 })
-                return recursive_contains(current_node.left)
+                retorno = recursive_contains(current_node.left)
+                steps.append({
+                    "type": "retorna", 
+                    "node": current_node, 
+                    "path": path.copy(),
+                    "message": f"{current_node.element}, retorna {retorno}"
+                })
+                return retorno
+                
             
             result = recursive_contains(self.root)
             return steps, result
