@@ -70,8 +70,8 @@ class BinarySearchTree:
                     "node": current_node, 
                     "path": path.copy(),
                     "message": f"{target} < {current_node.element}, retorna {retorno}"
+                    })
                     return retorno
-                })
                 
                 steps.append({
                     "type": "move", 
