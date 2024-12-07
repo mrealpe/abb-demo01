@@ -64,7 +64,14 @@ class BinarySearchTree:
                         "path": path.copy(),
                         "message": f"{target} > {current_node.element}, moviéndose al hijo derecho"
                     })
-                    return recursive_contains(current_node.right)
+                    retorno = recursive_contains(current_node.right)
+                    steps.append({
+                    "type": "retorna", 
+                    "node": current_node, 
+                    "path": path.copy(),
+                    "message": f"{target} < {current_node.element}, retorna {retorno}"
+                    return retorno
+                })
                 
                 steps.append({
                     "type": "move", 
