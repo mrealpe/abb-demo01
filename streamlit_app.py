@@ -108,7 +108,7 @@ class BinarySearchTree:
                 steps.append({
                     "type": "retorna", 
                     "node": current_node, 
-                    "message": f"{current_node.element}, retorna {altura_izq}"
+                    "message": f"{current_node.left.element}, retorna {altura_izq}"
                 })
 
                 
