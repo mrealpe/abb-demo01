@@ -124,7 +124,7 @@ class BinarySearchTree:
                 steps.append({
                     "type": "result", 
                     "node": current_node, 
-                    "message": f"Altura del nodo {current_node.element} ( {1}+ max({altura_izq}, {altura_der}): {max_altura}"
+                    "message": f"Altura del nodo {current_node.element} ( {1}+ max({altura_izq}, {altura_der})): {max_altura}"
                 })
                 
                 return max_altura
